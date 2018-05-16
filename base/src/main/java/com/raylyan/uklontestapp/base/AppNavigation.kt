@@ -11,13 +11,14 @@ object AppNavigation {
 
     object Posts {
 
-        val uri = baseNavigationUri()
+        val uri: Uri = baseNavigationUri()
                 .appendPath("posts")
                 .build()
     }
 
     class Comments(postId: Long) {
 
+        @Suppress("ClassName")
         sealed class Parameter(val key: String) {
             object POST_ID : Parameter("postId")
         }
@@ -28,7 +29,7 @@ object AppNavigation {
             }
         }
 
-        val uri = baseNavigationUri()
+        val uri: Uri = baseNavigationUri()
                 .appendPath("comments")
                 .appendQueryParameter(Parameter.POST_ID.key, postId.toString())
                 .build()

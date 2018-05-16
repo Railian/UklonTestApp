@@ -12,7 +12,7 @@ interface RemoteDataSource {
 interface LocalDataSource {
     fun hasPosts(): Single<Boolean>
     fun savePosts(posts: List<Post>): Completable
-    fun observePost(id:Long): Observable<Post>
+    fun observePost(id: Long): Observable<Post>
     fun observePosts(): Observable<List<Post>>
     fun saveComments(postId: Long, comments: List<Comment>): Completable
     fun observeComments(postId: Long): Observable<List<Comment>>

@@ -1,0 +1,46 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    baseFeature true
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility "$java_version"
+        sourceCompatibility "$java_version"
+    }
+}
+
+dependencies {
+    api 'com.android.support:design:27.1.1'
+    api 'com.android.support:cardview-v7:27.1.1'
+    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:recyclerview-v7:27.1.1'
+    api 'com.android.support.constraint:constraint-layout:1.1.0'
+    api "android.arch.lifecycle:extensions:$lifecycle_version"
+
+    api "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    api project(':business-domain')
+    implementation project(':business-logic')
+    implementation project(':platform-remote-retrofit')
+    implementation project(':platform-local-cache')
+
+    application project(':app')
+    feature project(':presentation-posts')
+    feature project(":presentation-comments")
+}

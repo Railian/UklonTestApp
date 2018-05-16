@@ -1,0 +1,4 @@
+include ':app', ':instantapp', ':base',
+        ':business-domain', ':business-logic',
+        ':platform-remote-retrofit', ':platform-local-cache',
+        ':presentation-posts', ':presentation-comments'

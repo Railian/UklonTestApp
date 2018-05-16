@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Uklon Test Application</string>
+    <string name="posts_label">Uklon Test App Posts</string>
+    <string name="comments_label">Comments</string>
+</resources>

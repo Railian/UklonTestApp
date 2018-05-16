@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+    <TextView
+        android:id="@+id/textViewPostTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:maxLines="1"
+        android:textAppearance="?android:textAppearanceListItem"
+        android:textColor="?android:textColorPrimary"
+        tools:text="Three-line item" />
+
+    <TextView
+        android:id="@+id/textViewPostBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto"
+        android:lineSpacingExtra="2dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:textAppearance="?android:textAppearanceListItemSecondary"
+        android:textColor="?android:textColorSecondary"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Secondary line text Lorem ipsum dolor sit amet,  consectetur adipiscing elit" />
+
+</LinearLayout>
